@@ -1,0 +1,10 @@
+def aplicar_descuento(precio, porcentaje):
+    if porcentaje > 0 and porcentaje <= 100:
+        descuento = precio * (porcentaje / 100)
+        precio_final = precio - descuento
+        return precio_final
+    else:
+        print("porcentaje invalido, no se aplicó el descuento")
+        return precio  # si el porcentaje no es válido, no aplica descuento
+print(aplicar_descuento(100, 150))  # 100 con 20% de descuento -> 80.0
+print(aplicar_descuento(100, 20))   # 50 con 10% de descuento -> 45.0
